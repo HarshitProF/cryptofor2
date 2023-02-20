@@ -3,7 +3,7 @@ class db:
     def __init__(self):
         self.conn=sqlite3.connect("my.db")
         cursor=self.conn.cursor()
-        cursor.execute('drop table chats')
+        #cursor.execute('drop table chats')
         cursor.execute("create table if NOT EXISTS chats ( chat_id int UNIQUE)")
     def insert(self,chats_id):
         cursor=self.conn.cursor()
