@@ -27,4 +27,4 @@ def send_message(ChatjoinRequest,bot:TeleBot):
         db.db().insert(ChatjoinRequest.user_chat_id)
     except Exception as e:
         print(e)
-    bot.send_video(chat_id=ChatjoinRequest.user_chat_id,caption=message1,photo=InputFile('images/download 1.jpg'))
+    bot.send_photo(chat_id=ChatjoinRequest.user_chat_id,caption=message1,photo=InputFile('images/download 1.jpg'))
